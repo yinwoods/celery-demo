@@ -34,13 +34,22 @@ def generate_orm_code(result):
 
 
 def generate_sql(result):
-    sql = 'create table'
+    sql = 'create table zhihu_live ('
+
+    res = list()
+    for key, value in result.items():
+        if isinstance(value, str):
+            res.append(f'{key} varchar(255)')
+        elif isinstance(value, int):
+            res.append(f'{key} int(10)')
+        elif isinstance(value, float):
+            res.append(f'{key} decimal(15, 5)')
+    sql += ', '.join(res)
+    sql += ');'
     print(sql)
-    # TODO
-    pass
 
 
 if __name__ == '__main__':
     result = parse_data()
-    generate_orm_code(result)
+    # generate_orm_code(result)
     generate_sql(result)
