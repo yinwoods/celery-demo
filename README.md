@@ -4,6 +4,7 @@
 
 * 运行 scripts/generate_orm_code.py 生成models/live.py 中的 ORM 代码
 * 运行 bin/run_mysql.sh bin/run_redis.sh bin/run_celery.sh 分别启动mysql、redis以及celery
+* 运行 bin/generate_mysql_table.sql 创建数据库以及数据表
 * python3 app.py 启动知乎 live 爬虫
 
 ### TODO
