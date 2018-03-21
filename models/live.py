@@ -6,6 +6,7 @@ Base = declarative_base()
 
 class Live(Base):
     __tablename__ = 'live'
+    id = Column(String(255), nullable=False, default=None, primary_key=True)
     object_type = Column(String(255), nullable=False, default=None)
     source_type = Column(String(255), nullable=False, default=None)
     live_liked = Column(Integer, nullable=False, default=None)
@@ -57,4 +58,6 @@ class Live(Base):
     live_starts_at = Column(Integer, nullable=False, default=None)
     action = Column(String(255), nullable=False, default=None)
     source_id = Column(Integer, nullable=False, default=None)
-    id = Column(String(255), nullable=False, default=None, primary_key=True)
+
+    def __repr__(self):
+        return self.__dict__

@@ -1,4 +1,5 @@
 **.pyc
-**/__pycache__
+**__pycache__
 .mypy_cache
 common/.mypy_cache
+celerybeat-schedule

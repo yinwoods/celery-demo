@@ -1,4 +1,4 @@
-from zhihu_walker.common.tools import flatten_dict
+from common.tools import flatten_dict
 
 
 if __name__ == '__main__':
